@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #container {
+      display: flex;
+      height: 100vh;
+    }
+
+    #left {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    #right {
+      flex: 1;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    form {
+      max-width: 400px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    .pricingDetails {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .pricingColumn {
+      flex: 1;
+    }
+
+    #productDetails {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+
+    #productImage {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .productTitle {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .productDescription {
+      border: 1px solid #000;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+
+    #productPrice {
+      font-size: 18px;
+      font-weight: bold;
+      color: green;
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .buttonContainer button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div id="left">
+      <h2>Let's add your first product</h2>
+      <p>Basic details</p>
+      <form>
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+
+        <label for="productDescription">Product Description:</label>
+        <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+
+        <label for="productImage">Add Image:</label>
+        <input type="file" id="productImage" name="productImage">
+
+        <label for="skuCode">SKU Code:</label>
+        <input type="text" id="skuCode" name="skuCode" required>
+
+        <hr>
+
+        <div class="pricingDetails">
+          <div class="pricingColumn">
+            <label for="listPrice" style="padding-bottom: 8px;">List Price:</label>
+            <input type="text" id="listPrice" name="listPrice" required>
+
+            <label for="priceInclusiveGST" style="padding-bottom: 8px;">Price Inclusive of GST:</label>
+            <input type="text" id="priceInclusiveGST" name="priceInclusiveGST" required>
+
+            <label for="netPrice" style="padding-bottom: 8px;">Net Price:</label>
+            <input type="text" id="netPrice" name="netPrice" required>
+          </div>
+
+          <div class="pricingColumn">
+            <label for="discountPercentage" style="padding-bottom: 8px;">Discount Percentage:</label>
+            <input type="text" id="discountPercentage" name="discountPercentage" required>
+
+            <label for="shippingCharges" style="padding-bottom: 8px;">Shipping Charges:</label>
+            <input type="text" id="shippingCharges" name="shippingCharges" required>
+
+            <label for="stockLevel" style="padding-bottom: 8px;">Stock Level:</label>
+            <input type="text" id="stockLevel" name="stockLevel" required>
+          </div>
+        </div>
+
+        <div class="buttonContainer">
+          <button type="button">Back</button>
+          <button type="button">Next</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="right">
+      <div id="productDetails">
+        <img id="productImage" src="https://images.unsplash.com/photo-1530319067432-f2a729c03db5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aXBob25lfGVufDB8fDB8fHww" alt="Product Image">
+        <div class="productTitle">Hello phone version 2</div>
+        <div class="productDescription">
+          The Hello Phone Version 2 features a stunning 6.5-inch AMOLED display with a 120Hz refresh rate. Powered by the HelloTech 9000 chipset and 8GB of RAM, it ensures smooth performance. Capture vivid moments with its triple-camera setup, including a 48 MP main lens. The device offers a sizable 128GB internal storage, expandable via microSD. With a robust 5000 mAh battery and fast charging, it's designed for a seamless and powerful mobile experience.</div>
+        <div id="productPrice">Price: Rs. 50000.00</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

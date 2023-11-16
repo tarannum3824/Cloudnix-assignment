@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    button {
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body style="background-color:aliceblue;" >
+    <div>
+        <p style="text-align: center; font-size:larger;"><b>Lets add a type, category and sub category</b></p>
+
+<form style="margin: auto; width: 2200px;">
+  <label for="productType">Add a product type:</label>
+  <select id="productType" name="productType">
+    <option value="clothing">Clothing</option>
+    <option value="electronics">Electronics</option>
+    <option value="accessories">Accessories</option>
+  </select>
+
+  <label for="category">Add a Category(optional):</label>
+  <select id="category" name="category">
+    <!-- Options for categories will be dynamically populated based on the selected product type -->
+  </select>
+
+  <label for="subCategory">Add a Subcategory(Optional):</label>
+  <select id="subCategory" name="subCategory">
+    <!-- Options for subcategories will be dynamically populated based on the selected category -->
+  </select>
+
+  <div class="button-container">
+    <button type="button" onclick="goBack()" style="color: black;">Back</button>
+    <button type="button" onclick="goNext()" style="background-color: rgb(0, 174, 255);">Next</button>
+  </div>
+</form>
+</div>
+
+<script>
+  // JavaScript functions for navigation
+  function goBack() {
+    // Implement logic to navigate back
+    alert('Navigating back');
+  }
+
+  function goNext() {
+    // Implement logic to navigate to the next step
+    alert('Navigating to the next step');
+  }
+</script>
+
+</body>
+</html>
